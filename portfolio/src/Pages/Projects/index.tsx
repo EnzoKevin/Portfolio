@@ -1,37 +1,29 @@
+"use client";
+
 import { Film, ExternalLink } from "lucide-react";
+import RerunImg from "@/assets/rerun.png";
+import EduTrack from "@/assets/eduTrack.png";
+import ApiGolang from "@/assets/golang.png";
+import Image from "next/image";
 
 const projects = [
   {
-    title: "StreamFlix",
-    description:
-      "Plataforma de streaming com recomendações personalizadas usando IA",
-    tech: ["React", "Node.js", "MongoDB", "TensorFlow"],
-    image:
-      "https://images.pexels.com/photos/7991579/pexels-photo-7991579.jpeg?auto=compress&cs=tinysrgb&w=800",
+    title: "Rerun",
+    description: "Recriação do site da rerun",
+    tech: ["React", "Node.js", "Responsividade", "TypeScript"],
+    image: RerunImg,
   },
   {
-    title: "Cinema Booking",
-    description:
-      "Sistema completo de reservas para cinemas com pagamento integrado",
-    tech: ["Next.js", "PostgreSQL", "Stripe", "TypeScript"],
-    image:
-      "https://images.pexels.com/photos/7991319/pexels-photo-7991319.jpeg?auto=compress&cs=tinysrgb&w=800",
+    title: "Api Golang",
+    description: "API Restful CRUD",
+    tech: ["Golang", "Docker", "MongoDB", "Clean Code"],
+    image: ApiGolang,
   },
   {
-    title: "Movie Analytics",
-    description:
-      "Dashboard de análise de bilheteria e tendências cinematográficas",
-    tech: ["React", "D3.js", "Express", "Redis"],
-    image:
-      "https://images.pexels.com/photos/265685/pexels-photo-265685.jpeg?auto=compress&cs=tinysrgb&w=800",
-  },
-  {
-    title: "Film Archive",
-    description:
-      "Arquivo digital de filmes clássicos com curadoria especializada",
-    tech: ["Vue.js", "Firebase", "Algolia", "AWS S3"],
-    image:
-      "https://images.pexels.com/photos/1117132/pexels-photo-1117132.jpeg?auto=compress&cs=tinysrgb&w=800",
+    title: "Edu Track",
+    description: "Dashboard de análise e registro de alunos em faculdades",
+    tech: ["Figma", "CSS", "HTML5", "JavaScript"],
+    image: EduTrack,
   },
 ];
 
@@ -58,7 +50,7 @@ export default function Projects() {
               className="group bg-[#1f1b2e] rounded-2xl overflow-hidden border border-[#2a2438] hover:border-[#ff8243] transition-all duration-300"
             >
               <div className="relative h-72 overflow-hidden">
-                <img
+                <Image
                   src={project.image}
                   alt={project.title}
                   className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
