@@ -1,7 +1,7 @@
 "use client";
 import { Mail } from "lucide-react";
 import { Formik, Field, Form } from "formik";
-import { supabase } from "@/lib/Supa";
+import { supabase } from "@/db/Config/SupaBase";
 import { useState } from "react";
 
 export default function Contact() {
